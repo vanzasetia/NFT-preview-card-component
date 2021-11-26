@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'functions' as *;
+
+@mixin focus-visible($color) {
+  &:focus-visible,
+  &:focus {
+    outline: rem(3) dotted $color;
+    outline-offset: rem(5);
+  }
+}
+
+@mixin set-background-color($color) {
+  background-color: $color;
+  color: set-color($color);
+}
+
+@mixin on-event() {
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($size) {
+  @media screen and (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin color-scheme($value: 'light') {
+  @media screen and (prefers-color-scheme:#{$value}) {
+    @content;
+  }
+}
+
+@mixin reduced-motion() {
+  @media screen and (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

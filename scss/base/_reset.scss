@@ -1,0 +1,161 @@
+@use "../abstracts" as *;
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+ * Making sure it inherits 100% of the 
+ * user font size settings 
+ */
+html {
+  font-size: 100%;
+}
+
+::selection {
+  background-color: rgb(22, 95, 204);
+  color: rgb(242, 242, 242);
+}
+
+::-moz-selection {
+  background-color: rgb(22, 95, 204);
+  color: rgb(242, 242, 242);
+}
+
+/**
+ * Screen Reader Class
+ * 
+ * To hide content visually.
+ *
+ * For more information: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
+ */
+.sr-only {
+  border: 0 !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+body {
+  font: rem(18) / 1.6 sans-serif;
+}
+
+p {
+  font-size: 1em;
+}
+
+noscript {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  border-radius: 1em;
+  background-color: rgb(255, 255, 255);
+  padding: rem(20);
+  width: rem(280);
+  font-size: rem(16);
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 1.6;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+/**
+ * Style Broken Images
+ * 
+ * Make it looks good even when the image doesn't load
+ * Source: https://bitsofco.de/styling-broken-images/
+ */
+img::before {
+  content: "We're sorry, the image below is broken :(";
+  display: block;
+  margin-bottom: 0.625rem;
+}
+
+img:after {
+  content: "(url: " attr(src) ")";
+  display: block;
+  font-size: 0.75rem;
+}
+
+/** 
+ * Avoid overloading a user with 
+ * sound from a video that 
+ * autoplays when the page is loaded.
+ *
+ * Source: https://github.com/AllThingsSmitty/css-protips#hide-autoplay-videos-that-arent-muted
+ */
+video[autoplay]:not([muted]) {
+  display: none;
+}
+
+/**
+ * Set font-size on Form Elements for a 
+ * Better Mobile Experience
+ *
+ * To avoid mobile browsers (iOS Safari,
+ * et al.) from zooming in on HTML form 
+ * elements when a <select> drop-down is
+ * tapped, add font-size to the selector
+ * rule.
+ *
+ * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
+ */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  font-size: 1rem;
+}
+
+/** 
+ * Using currentColor to inherit the 
+ * color value 
+ */
+svg path {
+  fill: currentColor;
+}
+
+/** 
+ * Set "display: none" on Line Breaks 
+ * Used as Spacing 
+ */
+br + br {
+  display: none;
+}

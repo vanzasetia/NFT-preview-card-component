@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="This HTML & CSS only challenge is perfect for anyone just starting out or anyone wanting a small project to play around with."
+    />
+    <meta
+      name="url"
+      content="https://nftcardfrontendmentor.netlify.app/"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Frontend Mentor | NFT Preview Card Component"
+    />
+    <meta
+      property="og:site_name"
+      content="NFT Preview Card Component"
+    />
+    <meta
+      property="og:description"
+      content="This HTML & CSS only challenge is perfect for anyone just starting out or anyone wanting a small project to play around with."
+    />
+    <meta
+      property="og:url"
+      content="https://nftcardfrontendmentor.netlify.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://nftcardfrontendmentor.netlify.app/design/desktop-design.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://nftcardfrontendmentor.netlify.app/"
+    />
+    <meta
+      name="twitter:title"
+      content="Frontend Mentor | NFT Preview Card Component"
+    />
+    <meta
+      name="twitter:description"
+      content="This HTML & CSS only challenge is perfect for anyone just starting out or anyone wanting a small project to play around with."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nftcardfrontendmentor.netlify.app/design/desktop-design.jpg"
+    />
+    <meta name="twitter:site" content="@vanzasetia" />
+    <meta name="twitter:creator" content="@vanzasetia" />
+    <!-- Google Verification -->
+
+    <link
+      rel="canonical"
+      href="https://nftcardfrontendmentor.netlify.app/"
+    />
+    <!-- Preload Font Family To Prevent Shifting Layout -->
+    <link
+      rel="preload"
+      href="/fonts/OutfitSemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/OutfitRegular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/OutfitLight.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- 
+    Directly used the preloaded font family
+    to prevent producing error message in the console
+    -->
+    <!-- prettier-ignore -->
+    <style>@font-face{font-family:"Outfit";font-style:normal;font-weight:600;font-display:swap;src:local("Outfit"), local("OutfitSemiBold"), local("Outfit Semi Bold"), local("Outfit-SemiBold"), url("/fonts/OutfitSemiBold.woff2") format("woff2"), url("/fonts/OutfitSemiBold.woff") format("woff")}@font-face{font-family:"Outfit";font-style:normal;font-weight:400;font-display:swap;src:local("Outfit"), local("OutfitRegular"), local("Outfit Regular"), local("Outfit-Regular"), url("/fonts/OutfitRegular.woff2") format("woff2"), url("/fonts/OutfitRegular.woff") format("woff")}@font-face{font-family:"Outfit";font-style:normal;font-weight:300;font-display:swap;src:local("Outfit"), local("OutfitLight"), local("Outfit Light"), local("Outfit-Light"), url("/fonts/OutfitLight.woff2") format("woff2"), url("/fonts/OutfitLight.woff") format("woff")}</style>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta
+      name="msapplication-config"
+      content="/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="/" />
+    <title>Frontend Mentor | NFT Preview Card Component</title>
+  </head>
+  <body dir="ltr">
+    <noscript>
+      <p>
+        For full functionality of this site it is necessary to enable
+        JavaScript.
+      </p>
+      <p>
+        Here are the
+        <a
+          href="https://www.enable-javascript.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >instructions how to enable JavaScript in your web
+          browser.</a
+        >
+      </p>
+    </noscript>
+    <main>
+      <h1 class="sr-only">NFT Preview Card Component Example</h1>
+      <a href="/images/equilibrium.jpg" class="card__preview">
+        <picture>
+          <source
+            srcset="/images/equilibrium.webp"
+            type="image/webp"
+          />
+          <img
+            src="/images/equilibrium.jpg"
+            alt="preview equilibrium."
+            class="card__banner"
+            height="604"
+            width="604"
+          />
+        </picture>
+      </a>
+      <div class="card__content">
+        <a href="#" class="card__title">
+          <h2 class="card__heading">Equilibrium #3429</h2>
+        </a>
+        <p class="card__description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <ul class="card__list">
+          <li class="card__price">
+            <img
+              src="/icons/ethereum.svg"
+              alt=""
+              class="card__ethereum-icon"
+              aria-hidden="hidden"
+              width="11"
+              height="18"
+            />
+            <p class="card__value">
+              0.041
+              <abbr
+                title="Ethereum (cryptocurrency)"
+                class="card__unit"
+                >ETH</abbr
+              >
+            </p>
+          </li>
+          <li class="card__time">
+            <img
+              src="/icons/clock.svg"
+              alt=""
+              class="card__clock-icon"
+              width="17"
+              height="17"
+              aria-hidden="true"
+            />
+            <p class="card__time-limit">3 days left</p>
+          </li>
+        </ul>
+        <div class="card__horizontal-rule" role="presentation"></div>
+        <div class="card__creator">
+          <picture>
+            <source srcset="/images/avatar.webp" type="image/webp" />
+            <img
+              src="/images/avatar.jpg"
+              alt="Jules Wyvern"
+              class="card__avatar"
+              width=""
+              height=""
+            />
+          </picture>
+        </div>
+        <p class="card__info">
+          Creation of
+          <a href="#" class="card__profile">Jules Wyvern</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

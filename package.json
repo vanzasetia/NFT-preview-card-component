@@ -1,0 +1,25 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "markserv": "markserv README.md",
+    "devserver": "browser-sync start --server  --watch --port='8080' --no-inject-changes",
+    "watch:sass": "sass scss/main.scss css/style.css --watch --no-source-map",
+    "start": "npm-run-all --parallel devserver watch:sass",
+
+    "prettier": "npx prettier --write .",
+    "semistandard:js": "semistandard --fix js/app.js",
+    "comb:stylesheets": "csscomb css/ scss/ -v",
+    "format": "npm-run-all prettier comb:stylesheets semistandard:js",
+
+    "compile:sass": "sass scss/main.scss css/style.css --no-source-map",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css --output css/style.css",
+    "compressed:css": "sass scss/main.scss css/style.min.css --style=compressed --no-source-map",
+    "ready": "npm-run-all compile:sass prettier comb:stylesheets semistandard:js prefix:css compressed:css"
+  },
+  "keywords": [],
+  "author": "Vanza Setia",
+  "license": "MIT"
+}
