@@ -67,7 +67,7 @@ My users should be able to:
 
 ### Screenshots
 
-![Desktop](./screenshots/desktop.jpg)
+![Desktop](./screenshots/desktop.png)
 
 
 ## My Process
