@@ -675,7 +675,7 @@ br + br {
 .card__creator {
   display: flex;
   align-items: center;
-  padding-top: 0.75rem;
+  padding: 0.75rem 0;
 }
 
 .card__avatar {
