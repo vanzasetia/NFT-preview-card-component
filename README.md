@@ -33,7 +33,11 @@
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
+    - [Better Performance](#better-performance)
+    - [Less Markup](#less-markup)
+      - [The Problem](#the-problem)
+      - [Worst Solution](#worst-solution)
+      - [Best Solution](#best-solution)
 - [Author](#author)
 - [License](#license)
 - [References](#references)
@@ -70,6 +74,7 @@ My users should be able to:
 [(Back to top)](#table-of-contents)
 
 ### Built With
+- **Following best practices**\* 
 - HTML Semantic Tags
 - [BEM (Block, Element, Modifier)](https://sparkbox.com/foundry/bem_by_example) Class *Naming Convention*
 - [Sass](https://sass-lang.com/)
@@ -78,9 +83,127 @@ My users should be able to:
 - Mobile-first workflow
 - [Normalize.css](https://necolas.github.io/normalize.css/)
 
+> * I follow guidelines. [See what guidelines that I follow.](./docs/README.md#guidelines)
+
 ### What I Learned
 
-### Useful Resources
+
+#### Better Performance
+
+The Frontend Mentor has provided me with optimized asset, but there is another way to optimized it to another level, which is using the `webp` image.
+
+The WebP image is smaller than the JPG, PNG, which means that my website can load even faster and safe user cellular data.
+
+But, the problem with WebP images are they are not widely supported yet, meaning that if the user browser don't know about the WebP images, then those images won't show up.
+
+So, to solve the problem I need `picture` tag. With `picture` tag I can make the browsers that support WebP images can load those images, while for the older browsers that don't support WebP images or even the `picture` will still be able to load the `img` tag.
+
+```html
+<picture>
+  <source
+    srcset="/images/equilibrium.webp"
+    type="image/webp"
+  />
+  <img
+    src="/images/equilibrium.jpg"
+    alt="preview equilibrium."
+    class="card__banner"
+    height="604"
+    width="604"
+  />
+</picture>
+```
+
+> Note: The tool to convert the normal images (PNG, JPG, etc) are on the [documentation](./docs/README.md#tools)
+
+#### Less Markup
+
+##### The Problem
+In this challenge there is one thing that is *tricky* to do, which is the eye and cyan background overlay.
+
+![Highlight the overlay part](./images/active-states-focus-overlay.png)
+
+##### Worst Solution
+The worst approach, that I could think of is by using HTML markup to create the overlay and the eye icon and then style it to make it look the same as on the design.
+
+```html
+<a href="/images/equilibrium.jpg" class="card__preview">
+  <picture>
+    <source
+      srcset="/images/equilibrium.webp"
+      type="image/webp"
+    />
+    <img
+      src="/images/equilibrium.jpg"
+      alt="preview equilibrium."
+      class="card__banner"
+      height="604"
+      width="604"
+    />
+  </picture>
+  <div class="card__overlay">
+    <img 
+      src="/icons/view.svg" 
+      alt="" 
+      aria-hidden="true"
+    />
+  </div>
+</a>
+```
+
+This is tough to style since the to do list:
+1. I have to make the `card__overlay` have full width and height by using absolute positioning.
+2. Then, I have to make the eye icon in the middle of the overlay by using `transform` property and absolute positioning.
+3. I have to set the `display` of the overlay.
+
+Too much thing to do for simple task.
+
+##### Best Solution
+After thinking for quite sometime, I decided to use CSS `background` property to handle the overlay and the eye icon at the same time.
+
+And here how it works:
+1. The HTML markup is very simple. Now, I could just delete the `div` and `img` tags.
+```html
+<a href="/images/equilibrium.jpg" class="card__preview">
+  <picture>
+    <source
+      srcset="/images/equilibrium.webp"
+      type="image/webp"
+    />
+    <img
+      src="/images/equilibrium.jpg"
+      alt="preview equilibrium."
+      class="card__banner"
+      height="604"
+      width="604"
+    />
+  </picture>
+</a>
+```
+> Note: Since I'm using WebP image, I have to use `picture` element to support all browsers.
+2. Now the styling part. All I had to do was using pseudo element and `background` shorthand property to handle everything.
+```css
+.card__preview {
+  position: relative;
+  display: block;
+}
+
+.card__preview::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card__preview:hover::after,
+.card__preview:active::after {
+  background: rgba(0, 255, 247, 0.6) url("../icons/view.svg") center/3rem no-repeat;
+}
+```
+
+As you can see, I am able to manage the overlay with a simple CSS styling.
 
 ## Author
 [(Back to top)](#table-of-contents)
