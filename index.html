@@ -142,7 +142,7 @@
         >
       </p>
     </noscript>
-    <main>
+    <main class="card">
       <h1 class="sr-only">NFT Preview Card Component Example</h1>
       <a href="/images/equilibrium.jpg" class="card__preview">
         <picture>
@@ -167,7 +167,7 @@
           Our Equilibrium collection promotes balance and calm.
         </p>
         <ul class="card__list">
-          <li class="card__price">
+          <li class="card__item">
             <img
               src="/icons/ethereum.svg"
               alt=""
@@ -176,7 +176,7 @@
               width="11"
               height="18"
             />
-            <p class="card__value">
+            <p class="card__price">
               0.041
               <abbr
                 title="Ethereum (cryptocurrency)"
@@ -185,7 +185,7 @@
               >
             </p>
           </li>
-          <li class="card__time">
+          <li class="card__item">
             <img
               src="/icons/clock.svg"
               alt=""
@@ -194,11 +194,10 @@
               height="17"
               aria-hidden="true"
             />
-            <p class="card__time-limit">3 days left</p>
+            <p class="card__time">3 days left</p>
           </li>
         </ul>
-        <div class="card__horizontal-rule" role="presentation"></div>
-        <div class="card__creator">
+        <figure class="card__creator">
           <picture>
             <source srcset="/images/avatar.webp" type="image/webp" />
             <img
@@ -209,11 +208,13 @@
               height=""
             />
           </picture>
-        </div>
-        <p class="card__info">
-          Creation of
-          <a href="#" class="card__profile">Jules Wyvern</a>
-        </p>
+          <figcaption class="card__figcaption">
+            <p class="card__info">
+              Creation of
+              <a href="#" class="card__profile">Jules Wyvern</a>
+            </p>
+          </figcaption>
+        </figure>
       </div>
     </main>
   </body>
