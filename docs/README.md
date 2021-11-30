@@ -61,7 +61,7 @@ These are the guidelines that I follow when I write the code.
 - [web.dev - Use WebP images](https://web.dev/serve-images-webp/)
 
 ### Tools
-- [Online JPG to WebP Converter](https://ezgif.com/jpg-to-webp)
+- [Online WebP Converter](https://ezgif.com/jpg-to-webp)
 - [Font Face Generator](https://everythingfonts.com/font-face) - convert `ttf` to `woff` and `woff2`
 
 ### Validations
