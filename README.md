@@ -80,7 +80,7 @@ My users should be able to:
 - Mobile-first workflow
 - [Normalize.css](https://necolas.github.io/normalize.css/)
 
-> * I follow guidelines. [See what guidelines that I follow.](./docs/README.md#guidelines)
+> I follow guidelines. [See what guidelines that I follow.](./docs/README.md#guidelines)
 
 ### What I Learned
 
