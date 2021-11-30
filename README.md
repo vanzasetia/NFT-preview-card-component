@@ -5,7 +5,7 @@
   <img alt="Repo size" src="https://img.shields.io/github/repo-size/vanzasetia/NFT-preview-card-component?style=for-the-badge&logo=github">
   <a href="https://twitter.com/vanzasetia" target="_blank"><img src="https://img.shields.io/twitter/follow/vanzasetia?logo=twitter&style=for-the-badge" alt="Twitter followers." /></a>
   <img alt="Last commit" src="https://img.shields.io/github/last-commit/vanzasetia/NFT-preview-card-component?style=for-the-badge&logo=git">
-  <img alt="Netlify" src="https://img.shields.io/netlify/?style=for-the-badge&logo=netlify">
+  <img alt="Netlify" src="https://img.shields.io/netlify/aa184957-8922-42f5-957d-d7f23946f941?style=for-the-badge&logo=netlify">
   <img alt="License" src="https://img.shields.io/github/license/vanzasetia/NFT-preview-card-component?color=green&style=for-the-badge&logo=github">
 </p>
 
