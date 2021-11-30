@@ -470,11 +470,19 @@ html {
 }
 
 body {
-  font: 0.703125rem sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font: 300 1.125rem/1.6 "Outfit", sans-serif;
+  background-color: #0d192b;
+  color: #8bacda;
+  padding: 3.4375rem 1.5rem;
 }
-
-p {
-  font-size: 1em;
+@media screen and (max-width: 22.4375em) {
+  body {
+    font-size: 0.9375rem;
+  }
 }
 
 noscript {
@@ -489,6 +497,11 @@ noscript {
   width: 17.5rem;
   font-size: 1rem;
   transform: translate(-50%, -50%);
+}
+
+a,
+abbr[title] {
+  text-decoration: none;
 }
 
 ul {
@@ -567,4 +580,119 @@ svg path {
  */
 br + br {
   display: none;
+}
+
+.card {
+  border-radius: 1em;
+  padding: 1.5rem;
+  background-color: #14253d;
+  max-width: 21.875rem;
+  box-shadow: 0.9375rem 1.875rem #0c1727, -0.9375rem 1.875rem #0c1727;
+}
+
+.card__preview {
+  position: relative;
+  display: block;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.card__preview:focus-visible, .card__preview:focus {
+  outline: 0.1875rem dotted #00fff7;
+  outline-offset: 0.3125rem;
+}
+.card__preview::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.card__preview:hover::after,
+.card__preview:active::after {
+  background: rgba(0, 255, 247, 0.6) url("../icons/view.svg") center/3rem no-repeat;
+}
+
+.card__content {
+  padding-top: 1.5rem;
+}
+
+.card__title {
+  display: inline-block;
+  color: white;
+  font-size: 1.125rem;
+}
+.card__title:focus-visible, .card__title:focus {
+  outline: 0.1875rem dotted #00fff7;
+  outline-offset: 0.3125rem;
+}
+.card__title:hover, .card__title:active {
+  color: #00fff7;
+}
+
+.card__description {
+  margin: 1em 0;
+}
+
+.card__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #2f415b;
+}
+
+.card__item {
+  display: flex;
+  align-items: center;
+}
+
+.card__price,
+.card__time {
+  font-weight: 400;
+}
+
+.card__price {
+  color: #00fff7;
+}
+
+.card__ethereum-icon,
+.card__clock-icon {
+  margin-right: 0.3125rem;
+}
+
+.card__ethereum-icon {
+  width: 0.6875rem;
+  height: 1.125rem;
+}
+
+.card__clock-icon {
+  width: 1.0625rem;
+  height: 1.0625rem;
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  padding-top: 0.75rem;
+}
+
+.card__avatar {
+  width: 2rem;
+  height: 2rem;
+  border: 0.0625rem solid white;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.card__profile {
+  color: white;
+}
+.card__profile:focus-visible, .card__profile:focus {
+  outline: 0.1875rem dotted #00fff7;
+  outline-offset: 0.3125rem;
+}
+.card__profile:hover, .card__profile:active {
+  color: #00fff7;
 }

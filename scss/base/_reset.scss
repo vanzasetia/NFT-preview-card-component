@@ -61,11 +61,18 @@ html {
 }
 
 body {
-  font: rem(18) / 1.6 sans-serif;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font: 300 #{rem(18)} / 1.6 "Outfit", sans-serif;
+  background-color: $very-dark-blue-300;
+  color: $soft-blue;
+  padding: rem(55) rem(24);
 
-p {
-  font-size: 1em;
+  @media screen and (max-width: 22.4375em) {
+    font-size: rem(15);
+  }
 }
 
 noscript {
@@ -80,6 +87,11 @@ noscript {
   width: rem(280);
   font-size: rem(16);
   transform: translate(-50%, -50%);
+}
+
+a,
+abbr[title] {
+  text-decoration: none;
 }
 
 ul {
