@@ -187,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -197,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -208,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted currentColor;
 }
 
@@ -260,8 +260,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -271,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -280,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -290,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -412,8 +412,8 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-delay: -1ms !important;
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
@@ -530,7 +530,7 @@ img::before {
   margin-bottom: 0.625rem;
 }
 
-img:after {
+img::after {
   content: "(url: " attr(src) ")";
   display: block;
   font-size: 0.75rem;
@@ -559,8 +559,8 @@ video[autoplay]:not([muted]) {
  *
  * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
  */
-input[type=text],
-input[type=number],
+input[type="text"],
+input[type="number"],
 select,
 textarea {
   font-size: 1rem;
@@ -596,7 +596,8 @@ br + br {
   border-radius: 0.5em;
   overflow: hidden;
 }
-.card__preview:focus-visible, .card__preview:focus {
+.card__preview:focus-visible,
+.card__preview:focus {
   outline: 0.1875rem dotted #00fff7;
   outline-offset: 0.3125rem;
 }
@@ -611,7 +612,8 @@ br + br {
 
 .card__preview:hover::after,
 .card__preview:active::after {
-  background: rgba(0, 255, 247, 0.6) url("../icons/view.svg") center/3rem no-repeat;
+  background: rgba(0, 255, 247, 0.6) url("../icons/view.svg")
+    center/3rem no-repeat;
 }
 
 .card__content {
@@ -623,11 +625,13 @@ br + br {
   color: white;
   font-size: 1rem;
 }
-.card__title:focus-visible, .card__title:focus {
+.card__title:focus-visible,
+.card__title:focus {
   outline: 0.1875rem dotted #00fff7;
   outline-offset: 0.3125rem;
 }
-.card__title:hover, .card__title:active {
+.card__title:hover,
+.card__title:active {
   color: #00fff7;
 }
 
@@ -689,10 +693,12 @@ br + br {
 .card__profile {
   color: white;
 }
-.card__profile:focus-visible, .card__profile:focus {
+.card__profile:focus-visible,
+.card__profile:focus {
   outline: 0.1875rem dotted #00fff7;
   outline-offset: 0.3125rem;
 }
-.card__profile:hover, .card__profile:active {
+.card__profile:hover,
+.card__profile:active {
   color: #00fff7;
 }

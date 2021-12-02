@@ -120,7 +120,7 @@ img::before {
   margin-bottom: 0.625rem;
 }
 
-img:after {
+img::after {
   content: "(url: " attr(src) ")";
   display: block;
   font-size: 0.75rem;
