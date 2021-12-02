@@ -153,7 +153,7 @@ This is tough to style since the to do list:
 2. Then, I have to make the eye icon in the middle of the overlay by using `transform` property and absolute positioning.
 3. I have to set the `display` of the overlay.
 
-Too much thing to do for simple task.
+Too much things to do for simple task.
 
 ##### Best Solution
 After thinking for quite sometime, I decided to use CSS `background` property to handle the overlay and the eye icon at the same time.
