@@ -60,7 +60,7 @@ My users should be able to:
 
 ### Links
 - [🌐 Live Review](https://nftcardfrontendmentor.netlify.app/)
-- [👨‍🏫 Frontend Mentor Solution Page]()
+- [👨‍🏫 Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/nft-card-preview-component-html-css-sass-GeV9Ozwqb)
 
 ### Screenshots
 
