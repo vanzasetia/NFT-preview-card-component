@@ -2,20 +2,18 @@
 
 .card {
   border-radius: 1em;
-  padding: rem(24);
-  background-color: $very-dark-blue-200;
-  max-width: rem(350);
   box-shadow: rem(15) rem(30) darken-color($very-dark-blue-300, 10%),
-    -#{rem(15)} rem(30) darken-color($very-dark-blue-300, 10%);
+  -#{rem(15)} rem(30) darken-color($very-dark-blue-300, 10%);
+  background-color: $very-dark-blue-200;
+  padding: rem(24);
+  max-width: rem(350);
 }
 
 .card__preview {
-  position: relative;
   display: block;
+  position: relative;
   border-radius: 0.5em;
-  overflow: hidden;
-
-  @include focus-visible($cyan);
+  overflow: hidden;@include focus-visible($cyan);
 
   &::after {
     content: "";
@@ -28,11 +26,10 @@
   }
 }
 
-.card__preview:hover::after,
-.card__preview:active::after {
+.card__preview:hover::after, .card__preview:active::after {
   background: rgba($cyan, 0.6) url("../icons/view.svg") center/#{rem(
-      48
-    )} no-repeat;
+  48
+  )} no-repeat;
 }
 
 .card__content {
@@ -41,11 +38,7 @@
 
 .card__title {
   color: $pure-white;
-  font-size: rem(24);
-
-  @include focus-visible($cyan);
-
-  @include on-event {
+  font-size: rem(24);@include focus-visible($cyan);@include on-event {
     color: $cyan;
   }
 }
@@ -58,8 +51,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: rem(12) 0;
   border-bottom: rem(1) solid $very-dark-blue-100;
+  padding: rem(12) 0;
 }
 
 .card__item {
@@ -67,8 +60,7 @@
   align-items: center;
 }
 
-.card__price,
-.card__time {
+.card__price, .card__time {
   font-weight: 400;
 }
 
@@ -76,8 +68,7 @@
   color: $cyan;
 }
 
-.card__ethereum-icon,
-.card__clock-icon {
+.card__ethereum-icon, .card__clock-icon {
   margin-right: rem(5);
 }
 
@@ -98,19 +89,15 @@
 }
 
 .card__avatar {
-  width: rem(32);
-  height: rem(32);
+  margin-right: 1em;
   border: rem(1) solid $pure-white;
   border-radius: 50%;
-  margin-right: 1em;
+  width: rem(32);
+  height: rem(32);
 }
 
 .card__profile {
-  color: $pure-white;
-
-  @include focus-visible($cyan);
-
-  @include on-event {
+  color: $pure-white;@include focus-visible($cyan);@include on-event {
     color: $cyan;
   }
 }

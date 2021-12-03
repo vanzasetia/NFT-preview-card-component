@@ -1,22 +1,18 @@
 @use "../abstracts" as *;
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
+  *, *::before, *::after {
     background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0s !important;
     transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    animation-duration: 1ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -48,15 +44,15 @@ html {
  * For more information: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
  */
 .sr-only {
-  border: 0 !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
   position: absolute !important;
+  margin: -1px !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  border: 0 !important;
+  padding: 0 !important;
   width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
   white-space: nowrap !important;
 }
 
@@ -64,11 +60,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  font: 300 #{rem(18)} / 1.6 "Outfit", sans-serif;
   background-color: $very-dark-blue-300;
-  color: $soft-blue;
   padding: rem(55) rem(24);
+  min-height: 100vh;
+  color: $soft-blue;
+  font: 300 #{rem(18)} / 1.6 "Outfit", sans-serif;
 
   @media screen and (max-width: 22.4375em) {
     font-size: rem(15);
@@ -89,8 +85,7 @@ noscript {
   transform: translate(-50%, -50%);
 }
 
-a,
-abbr[title] {
+a, abbr[title] {
   text-decoration: none;
 }
 
@@ -149,10 +144,7 @@ video[autoplay]:not([muted]) {
  *
  * Source: https://github.com/AllThingsSmitty/css-protips#set-font-size-on-form-elements-for-a-better-mobile-experience
  */
-input[type="text"],
-input[type="number"],
-select,
-textarea {
+input[type="text"], input[type="number"], select, textarea {
   font-size: 1rem;
 }
 
