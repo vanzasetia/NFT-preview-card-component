@@ -620,9 +620,8 @@ br + br {
 }
 
 .card__title {
-  display: inline-block;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .card__title:focus-visible, .card__title:focus {
   outline: 0.1875rem dotted #00fff7;
