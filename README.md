@@ -15,11 +15,6 @@
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
     </a>
-    <a href="https://github.com/standard/semistandard">
-      <img style="border:0;height:31px"
-        src="https://raw.githubusercontent.com/standard/semistandard/master/badge.svg"
-        alt="JavaScript Style Guide" />
-    </a>
 </p>
 
 # NFT Preview Card Component
@@ -75,7 +70,6 @@ My users should be able to:
 - HTML Semantic Tags
 - [BEM (Block, Element, Modifier)](https://sparkbox.com/foundry/bem_by_example) Class *Naming Convention*
 - [Sass](https://sass-lang.com/)
-- Vanilla JavaScript
 - CSS Flexbox
 - Mobile-first workflow
 - [Normalize.css](https://necolas.github.io/normalize.css/)

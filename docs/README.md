@@ -49,9 +49,7 @@ I used all the color from the [`style-guide.md`](../style-guide.md) and one addi
 These are the guidelines that I follow when I write the code.
 - [HTML Best Practices](https://github.com/hail2u/html-best-practices)
 - [Sass Guidelines](https://sass-guidelin.es/)
-- [JavaScript Best Practices](https://www.w3.org/wiki/JavaScript_best_practices)
 
-> Note: I follow all HTML guidelines. For the Sass and JavaScript, I follow some of them.
 
 ### Web Doc
 - [font - CSS: Cascading Style Sheets - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
