@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
+    <title>Frontend Mentor | NFT Preview Card Component</title>
     <meta
       name="description"
       content="This HTML & CSS only challenge is perfect for anyone just starting out or anyone wanting a small project to play around with."
@@ -75,6 +76,7 @@
     -->
     <!-- prettier-ignore -->
     <style>@font-face{font-family:"Outfit";font-style:normal;font-weight:600;font-display:swap;src:local("Outfit"), local("OutfitSemiBold"), local("Outfit Semi Bold"), local("Outfit-SemiBold"), url("/fonts/OutfitSemiBold.woff2") format("woff2"), url("/fonts/OutfitSemiBold.woff") format("woff")}@font-face{font-family:"Outfit";font-style:normal;font-weight:400;font-display:swap;src:local("Outfit"), local("OutfitRegular"), local("Outfit Regular"), local("Outfit-Regular"), url("/fonts/OutfitRegular.woff2") format("woff2"), url("/fonts/OutfitRegular.woff") format("woff")}@font-face{font-family:"Outfit";font-style:normal;font-weight:300;font-display:swap;src:local("Outfit"), local("OutfitLight"), local("Outfit Light"), local("Outfit-Light"), url("/fonts/OutfitLight.woff2") format("woff2"), url("/fonts/OutfitLight.woff") format("woff")}</style>
+    <link rel="stylesheet" href="/css/style.min.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -104,8 +106,6 @@
       content="/favicons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="/css/style.min.css" />
-    <title>Frontend Mentor | NFT Preview Card Component</title>
   </head>
   <body dir="ltr">
     <main class="card">
@@ -132,8 +132,8 @@
         <p class="card__description">
           Our Equilibrium collection promotes balance and calm.
         </p>
-        <ul class="card__list">
-          <li class="card__item">
+        <div class="card__list">
+          <p class="card__item">
             <img
               src="/icons/ethereum.svg"
               alt=""
@@ -142,16 +142,16 @@
               width="11"
               height="18"
             />
-            <p class="card__price">
+            <span class="card__price">
               0.041
               <abbr
                 title="Ethereum (cryptocurrency)"
                 class="card__unit"
                 >ETH</abbr
               >
-            </p>
-          </li>
-          <li class="card__item">
+            </span>
+          </p>
+          <p class="card__item">
             <img
               src="/icons/clock.svg"
               alt=""
@@ -160,9 +160,9 @@
               height="17"
               aria-hidden="true"
             />
-            <p class="card__time">3 days left</p>
-          </li>
-        </ul>
+            <span class="card__time">3 days left</span>
+          </p>
+        </div>
         <figure class="card__creator">
           <picture>
             <source srcset="/images/avatar.webp" type="image/webp" />
