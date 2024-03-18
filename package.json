@@ -19,6 +19,5 @@
     "ready": "npm-run-all compile:sass prettier comb:stylesheets prefix:css compressed:css"
   },
   "keywords": [],
-  "author": "Vanza Setia",
-  "license": "MIT"
+  "author": "Vanza Setia"
 }
